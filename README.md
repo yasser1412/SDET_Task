@@ -50,15 +50,15 @@ results as a count and results using nightwatch.
 
 - Documented all test cases created, and all bugs found.
 
-- Created a pipline using circleci for CI/CD that auto runs tests and deliver test reports to [Auto-updated-test-reports](https://github.com/yasser1412/SDET_Task/tree/Auto-updated-test-reports) branch, which is trigered by Github App Trigger on the main branch.
+- Created a pipline using circleci for CI/CD that auto runs tests and deliver test reports to [Auto-deliver-test-reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports) branch, which is trigered by Github App Trigger on the main branch.
 
 ## Reports:
 
-### [UI Reports](https://github.com/yasser1412/SDET_Task/tree/Auto-updated-test-reports/UI/nightwatchReports):
+### [UI Reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports/UI/nightwatchReports):
 
 - https://rawcdn.githack.com/yasser1412/SDET_Task/35fdace4a50315cdc0630d7cf95e1ba2b8262e76/UI/nightwatchReports/nightwatch-html-report/index.html
 
-### [API Report](https://github.com/yasser1412/SDET_Task/tree/Auto-updated-test-reports/API/jestReports):
+### [API Report](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports/API/jestReports):
 
 - https://rawcdn.githack.com/yasser1412/SDET_Task/35fdace4a50315cdc0630d7cf95e1ba2b8262e76/API/jestReports/test-report.html
 
