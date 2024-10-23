@@ -34,6 +34,16 @@ module.exports = {
       },
       desiredCapabilities: {
         browserName: 'chrome',
+        chromeOptions: {  
+          args: [
+            '--headless',         // Run in headless mode
+            '--no-sandbox',       // Disable the sandbox for better compatibility in CI
+            '--disable-gpu',      // Disable GPU usage
+            '--window-size=1280,800',  // Set a window size for headless mode
+            '--disable-dev-shm-usage', // Disable /dev/shm usage for more shared memory
+          ],
+          w3c: false,  // Disable W3C mode for better compatibility with Chrome
+        } 
       },
       screenshots: {
         enabled: false,
