@@ -34,10 +34,10 @@ jobs:
 
       # Run UI tests
       - run:
-        name: Run UI tests
-        command: npm run uiTest || true
-        environment:
-          CONTINUE_ON_FAIL: true
+          name: Run UI tests
+          command: npm run uiTest || true
+          environment:
+            CONTINUE_ON_FAIL: true
 
       # Run API 
       - run:
