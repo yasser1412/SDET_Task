@@ -66,6 +66,7 @@ jobs:
           command: |
             git config --global user.email "circleci-bot@example.com"
             git config --global user.name "CircleCI Bot"
+            git config pull.rebase true
 
             git checkout -b Auto-updated-test-reports || git checkout Auto-updated-test-reports
             git add ./API/jestReports
