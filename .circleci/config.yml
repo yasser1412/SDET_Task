@@ -71,6 +71,7 @@ jobs:
             git add ./API/jestReports
             git add ./UI/nightwatchReports
             git commit -m "Auto-update test reports [skip ci]"
+            git config --global pull.ff only
             git pull https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-updated-test-reports
             git push https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-updated-test-reports
 
