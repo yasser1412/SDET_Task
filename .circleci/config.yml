@@ -17,7 +17,7 @@ jobs:
       - run:
           name: run UI tests
           command: |
-            npm run uiTests
+            npm run uiTest
       - run:
           name: run API
           command: |
@@ -25,7 +25,7 @@ jobs:
       - run:
           name: run API tests
           command: |
-            npm run apiTests
+            npm run apiTest
 
 workflows:
   build-and-test:
