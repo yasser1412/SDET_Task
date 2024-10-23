@@ -36,11 +36,13 @@ module.exports = {
         browserName: 'chrome',
       },
       screenshots: {
-        enabled: true,
+        enabled: false,
         on_failure: true,
         on_error: true,
         path: './UI/nightwatchReports/screenshots',
-      }
+      },
+      abortOnAssertionFailure: false,
+      skip_testcases_on_fail: false,
     }
   },
 
