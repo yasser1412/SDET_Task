@@ -1,37 +1,36 @@
 version: 2.1
 orbs:
   node: circleci/node@5
+
 jobs:
-  Build-and-Tests :
-    # Install node dependencies and run tests
+  Build-and-Tests:
+    # Use the node orb's default executor
     executor: node/default
     steps:
-      - node/install
-      - run UI tests
-      - run API
-      - run API tests
+      - checkout  # Check out the code from the repository
+
+      # Install Node.js dependencies
       - run:
-          name: install dependencies
-          command: |
-            npm install
+          name: Install dependencies
+          command: npm install
+
+      # Run UI tests
       - run:
-          name: run UI tests
-          command: |
-            npm run uiTest
+          name: Run UI tests
+          command: npm run uiTest
+
+      # Run API 
       - run:
-          name: run API
-          command: |
-            npm run api
+          name: Run API 
+          command: npm run api
+
+      # Run API tests
       - run:
-          name: run API tests
-          command: |
-            npm run apiTest
+          name: Run API tests
+          command: npm run apiTest
 
 workflows:
+  version: 2
   build-and-test:
     jobs:
-    # Build & Tests project on Main Branch
-      - Build-and-Tests:
-         filters:
-            branches:
-              only: main
+      - Build-and-Tests
