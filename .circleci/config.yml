@@ -1,0 +1,37 @@
+version: 2.1
+orbs:
+  node: circleci/node@5
+jobs:
+  Build-and-Tests :
+    # Install node dependencies and run tests
+    executor: node/default
+    steps:
+      - node/install
+      - run UI tests
+      - run API
+      - run API tests
+      - run:
+          name: install dependencies
+          command: |
+            npm install
+      - run:
+          name: run UI tests
+          command: |
+            npm run uiTests
+      - run:
+          name: run API
+          command: |
+            npm run api
+      - run:
+          name: run API tests
+          command: |
+            npm run apiTests
+
+workflows:
+  build-and-test:
+    jobs:
+    # Build & Tests project on Main Branch
+      - Build-and-Tests:
+         filters:
+            branches:
+              only: main
