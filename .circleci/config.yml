@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  node: circleci/node@5
 
 jobs:
   Build-and-Tests:
@@ -14,6 +16,24 @@ jobs:
           command: |
             npx chromedriver --port=9515 --url-base=wd/hub &
             sleep 5
+
+      # Run UI tests
       - run:
           name: Run UI tests
           command: npm run uiTest
+
+      # Run API 
+      - run:
+          name: Run API 
+          command: npm run api
+
+      # Run API tests
+      - run:
+          name: Run API tests
+          command: npm run apiTest
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - Build-and-Tests
