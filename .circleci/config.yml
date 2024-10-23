@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Run API 
           command: |
-            node ./node_modules/mock-user-auth/bin/www.js &
+            npm run api &
             sleep 10
 
       # Run API tests
