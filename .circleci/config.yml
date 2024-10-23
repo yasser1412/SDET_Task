@@ -43,8 +43,8 @@ jobs:
       - run:
           name: Run API 
           command: |
-            npm run api &
-            sleep 10
+            nohup npm run api > server.log 2>&1 & # Use nohup to persist the process
+            ./wait-for-it.sh 127.0.0.1:3000 --timeout=30 --strict -- echo "Server is up!"
 
       # Run API tests
       - run:
