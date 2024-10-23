@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="10">
+
+  <testsuite name="contactUsTests"
+    errors="0" failures="0" hostname="" id="" package="contactUsTests" skipped="0"
+    tests="10" time="137.2" timestamp="">
+  
+    <testcase name="Successful Submission with All Fields" classname="contactUsTests" time="5.641" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submission without Optional Fields" classname="contactUsTests" time="1.521" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submission with File Upload" classname="contactUsTests" time="1.720" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Missing Subject Heading" classname="contactUsTests" time="1.397" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Missing Email Address" classname="contactUsTests" time="1.497" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Missing Message" classname="contactUsTests" time="1.474" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Email Format" classname="contactUsTests" time="1.487" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Attach Invalid File Format" classname="contactUsTests" time="1.947" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Attach Large File" classname="contactUsTests" time="49.65" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Form Resubmission after Error" classname="contactUsTests" time="2.215" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
