@@ -16,7 +16,7 @@ describe('External API Routes', () => {
                 .set('Content-Type', 'application/json')
                 .send({ email: validEmail, password: validPassword });
 
-            if (res.statusCode === 201) {
+            if (res.statusCode === 201 || res.statusCode === 200) {
                 console.log('User created successfully before tests:', res.body);
             } else {
                 console.error('Failed to create user before tests:', res.body.error || res.body.message || res.statusCode);
@@ -163,10 +163,10 @@ describe('External API Routes', () => {
         it('should delete user with valid token', async () => {
             const res = await request(BASE_URL)
                 .delete('/users')
-                .set('Authorization', `${token}`);
+                .set('Authorization', `${token}`)
 
             expect(res.statusCode).toBe(200);
-            expect(res.body).toHaveProperty('message', 'User deleted with success');
+            expect(res.body).toHaveProperty('message', 'User deleted with success!');
         });
 
         it('should fail with invalid token', async () => {
