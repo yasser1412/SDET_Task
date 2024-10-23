@@ -38,12 +38,19 @@ jobs:
           command: npm run uiTest || true
           environment:
             CONTINUE_ON_FAIL: true
-
-      # Run API 
+            
+      # Download wait-for-it.sh
       - run:
-          name: Run API 
+          name: Download wait-for-it.sh
           command: |
-            nohup npm run api > server.log 2>&1 & # Use nohup to persist the process
+            curl -o wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
+            chmod +x wait-for-it.sh
+
+      # Start the server in the background using nohup
+      - run:
+          name: Start Local Server
+          command: |
+            nohup npm run api > server.log 2>&1 &  # Start server in the background
             ./wait-for-it.sh 127.0.0.1:3000 --timeout=30 --strict -- echo "Server is up!"
 
       # Run API tests
