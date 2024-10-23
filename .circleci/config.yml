@@ -14,6 +14,20 @@ jobs:
           name: Install dependencies
           command: npm install
 
+      # Install Chrome and ChromeDriver
+      - run:
+          name: Install Chrome & ChromeDriver
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
+            npm install chromedriver --save-dev
+
+      # Run ChromeDriver
+      - run:
+          name: Start ChromeDriver
+          command: |
+            npx chromedriver --port=9515 --url-base=wd/hub &
+            
       # Run UI tests
       - run:
           name: Run UI tests
