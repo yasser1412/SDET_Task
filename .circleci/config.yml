@@ -39,26 +39,37 @@ jobs:
           environment:
             CONTINUE_ON_FAIL: true
 
-      # # Download wait-for-it.sh
-      # - run:
-      #     name: Download wait-for-it.sh
-      #     command: |
-      #       curl -o wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
-      #       chmod +x wait-for-it.sh
+      # Download wait-for-it.sh
+      - run:
+          name: Download wait-for-it.sh
+          command: |
+            curl -o wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
+            chmod +x wait-for-it.sh
 
-      # # Start the server in the background using nohup
-      # - run:
-      #     name: Start Local Server
-      #     command: |
-      #       nohup npm run api > server.log 2>&1 &  # Start server in the background
-      #       ./wait-for-it.sh 127.0.0.1:3000 --timeout=30 --strict -- echo "Server is up!"
+      # Start the server in the background using nohup
+      - run:
+          name: Start Local Server
+          command: |
+            nohup npm run api > server.log 2>&1 &  # Start server in the background
+            ./wait-for-it.sh 127.0.0.1:3000 --timeout=30 --strict -- echo "Server is up!"
 
-      # # Run API tests
-      # - run:
-      #     name: Run API tests || true
-      #     command: npm run apiTest
-      #     environment:
-      #       CONTINUE_ON_FAIL: true
+      # Run API tests
+      - run:
+          name: Run API tests 
+          command: npm run apiTest || true
+          environment:
+            CONTINUE_ON_FAIL: true
+
+      # Add, commit, and push the reports
+      - run:
+          name: Auto-commit and push reports
+          command: |
+            git config --global user.email "$email"
+            git config --global user.name "$username"
+            git add ./API/jestReports
+            git add ./UI/nightwatchReports
+            git commit -m "Auto-update test reports [skip ci]"
+            git push https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-updated-test-reports 
 
 workflows:
   version: 2
