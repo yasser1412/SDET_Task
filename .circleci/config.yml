@@ -14,10 +14,13 @@ jobs:
           name: Install dependencies
           command: npm install
 
-      # Install Chrome and ChromeDriver
       - run:
           name: Install Chrome & ChromeDriver
           command: |
+            sudo apt-get update
+            sudo apt-get install -y wget
+            wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
             sudo apt-get update
             sudo apt-get install -y google-chrome-stable
             npm install chromedriver --save-dev
@@ -27,7 +30,7 @@ jobs:
           name: Start ChromeDriver
           command: |
             npx chromedriver --port=9515 --url-base=wd/hub &
-            
+
       # Run UI tests
       - run:
           name: Run UI tests
