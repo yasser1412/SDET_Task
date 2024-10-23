@@ -42,7 +42,9 @@ jobs:
       # Run API 
       - run:
           name: Run API 
-          command: npm run api
+          command: |
+            npm run api &
+            sleep 5
 
       # Run API tests
       - run:
