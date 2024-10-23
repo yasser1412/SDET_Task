@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@5
 
 jobs:
-  Build-and-Tests:
+  build-and-test:
     # Use the node orb's default executor
     executor: node/default
     steps:
