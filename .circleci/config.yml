@@ -64,12 +64,14 @@ jobs:
       - run:
           name: Auto-commit and push reports
           command: |
-            git config --global user.email "$email"
-            git config --global user.name "$username"
+            git config --global user.email "circleci-bot@example.com"
+            git config --global user.name "CircleCI Bot"
+
+            git checkout -b Auto-updated-test-reports || git checkout Auto-updated-test-reports
             git add ./API/jestReports
             git add ./UI/nightwatchReports
             git commit -m "Auto-update test reports [skip ci]"
-            git push https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-updated-test-reports 
+            git push https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-updated-test-reports
 
 workflows:
   version: 2
