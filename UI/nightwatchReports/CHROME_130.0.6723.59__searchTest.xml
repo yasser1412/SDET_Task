@@ -5,9 +5,9 @@
 
   <testsuite name="searchTest"
     errors="0" failures="1" hostname="" id="" package="searchTest" skipped="0"
-    tests="2" time="18.69" timestamp="">
+    tests="2" time="18.14" timestamp="">
   
-    <testcase name="Search for &#34;dress&#34; and verify results" classname="searchTest" time="7.399" assertions="9">
+    <testcase name="Search for &#34;dress&#34; and verify results" classname="searchTest" time="7.174" assertions="9">
 
     
 
@@ -23,12 +23,12 @@
 
     
 
-      <failure message="Failed [ok]: (Result 6 contains &#34;dress&#34;) - expected &#34;true&#34; but got: &#34;false&#34; (1ms)">    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\pc\Desktop\SDET-Task\SDET_Task\UI\page-objects\homePage.js:43:53)</failure>
-<system-out>[[ATTACHMENT|C:\Users\pc\Desktop\SDET-Task\SDET_Task\UI\nightwatchReports\screenshots\searchTest\Search-for-dress-and-verify-results_FAILED_Oct-23-2024-174534-GMT+0300.png]]</system-out>
+      <failure message="Failed [ok]: (Result 6 contains &#34;dress&#34;) - expected &#34;true&#34; but got: &#34;false&#34; (0ms)">    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\pc\Desktop\SDET-Task\SDET_Task\UI\page-objects\homePage.js:43:53)</failure>
+
     
     </testcase>
   
-    <testcase name="Search for &#34;dress&#34; then Count and verify the total number of results" classname="searchTest" time="1.946" assertions="4">
+    <testcase name="Search for &#34;dress&#34; then Count and verify the total number of results" classname="searchTest" time="1.896" assertions="4">
 
     
 

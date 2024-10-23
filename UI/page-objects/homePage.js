@@ -39,7 +39,7 @@ module.exports = {
                                         const resultText = textResult.value.toLowerCase();
                                         console.log(`Result ${index + 1}: ${resultText}`);
 
-                                        // Assert that the result text contains the expected text
+                                        // assert that the result text contains the expected text
                                         page.assert.ok(
                                             resultText.includes(expectedText.toLowerCase()), 
                                             `Result ${index + 1} contains "${expectedText}"`
