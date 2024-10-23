@@ -8,7 +8,7 @@ module.exports = {
                 email: 'test@example.com',
                 orderReference: '12345',
                 message: 'This is a test message.',
-                filePath: '../testFiles/samplefile.pdf'  // Replace with actual file path
+                filePath: '../testfiles/samplefile.pdf'  // Replace with actual file path
             })
             .submitAndExpectSuccess();
     },
@@ -33,7 +33,7 @@ module.exports = {
                 subject: '2',
                 email: 'test@example.com',
                 message: 'This is a file upload test.',
-                filePath: '../testFiles/samplefile.pdf'  // Replace with actual file path
+                filePath: '../testfiles/samplefile.pdf'  // Replace with actual file path
             })
             .submitAndExpectSuccess();
     },
@@ -95,7 +95,7 @@ module.exports = {
                 subject: '2',
                 email: 'test@example.com',
                 message: 'Trying to upload an invalid file.',
-                filePath: '../testFiles/samplefile.exe'  // Replace with actual invalid file path
+                filePath: '../testfiles/samplefile.exe'  // Replace with actual invalid file path
             })
             .submitAndExpectError();
     },
@@ -108,7 +108,7 @@ module.exports = {
                 subject: '2',
                 email: 'test@example.com',
                 message: 'Trying to upload a large file.',
-                filePath: '../testFiles/largesamplefile.pdf'  // Replace with actual large file path
+                filePath: '../testfiles/largesamplefile.pdf'  // Replace with actual large file path
             })
             .submitAndExpectSuccess();
     },
