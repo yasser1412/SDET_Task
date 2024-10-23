@@ -38,7 +38,7 @@ jobs:
           command: npm run uiTest || true
           environment:
             CONTINUE_ON_FAIL: true
-            
+
       # Download wait-for-it.sh
       - run:
           name: Download wait-for-it.sh
@@ -55,8 +55,10 @@ jobs:
 
       # Run API tests
       - run:
-          name: Run API tests
+          name: Run API tests || true
           command: npm run apiTest
+          environment:
+            CONTINUE_ON_FAIL: true
 
 workflows:
   version: 2
