@@ -4,18 +4,33 @@ orbs:
 
 jobs:
   Build-and-Tests:
-    docker:
-      - image: cypress/base:node-16.14.0-chrome95
+    # Use the node orb's default executor
+    executor: node/default
     steps:
-      - checkout
+      - checkout  # Check out the code from the repository
+
+      # Install Node.js dependencies
       - run:
           name: Install dependencies
           command: npm install
+
+      - run:
+          name: Install Chrome & ChromeDriver
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y wget
+            wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
+            npm install chromedriver --save-dev
+
+      # Start ChromeDriver in the background
       - run:
           name: Start ChromeDriver
           command: |
             npx chromedriver --port=9515 --url-base=wd/hub &
-            sleep 5
+            sleep 5  # Wait for ChromeDriver to start
 
       # Run UI tests
       - run:
