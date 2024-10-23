@@ -1,0 +1,25 @@
+{
+  "name": "siemens-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "apiTest": "jest",
+    "uiTest": "nightwatch",
+    "api": "nodemon ./node_modules/mock-user-auth/bin/www.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^130.0.0",
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "mock-user-auth": "^1.0.15",
+    "nightwatch": "^3.8.0",
+    "nightwatch-html-reporter": "^2.0.6",
+    "selenium-server": "^3.141.59",
+    "selenium-standalone": "^10.0.0",
+    "supertest": "^7.0.0"
+  }
+}
