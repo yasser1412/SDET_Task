@@ -70,9 +70,8 @@ jobs:
             git branch -D Auto-deliver-test-reports || true
             git checkout -b Auto-deliver-test-reports
 
-            git reset --hard
-            git add ./API/jestReports
-            git add ./UI/nightwatchReports
+            git reset --hard https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git/Auto-deliver-test-reports
+            git add .
             git commit -m "Auto-update test reports [skip ci]"
             git pull https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-deliver-test-reports --rebase
             git push https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-deliver-test-reports
