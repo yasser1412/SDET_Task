@@ -67,8 +67,8 @@ jobs:
             git config --global user.email "circleci-bot@example.com"
             git config --global user.name "CircleCI Bot"
 
-            git branch -D Auto-deliver-test-reports || true
-            git checkout -b Auto-deliver-test-reports
+            git clean -fd
+            git checkout -b Auto-deliver-test-reports || git checkout Auto-deliver-test-reports
 
             git reset --hard
             git pull https://$GIT_PUSH_TOKEN@github.com/yasser1412/SDET_Task.git Auto-deliver-test-reports --rebase
