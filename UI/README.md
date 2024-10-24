@@ -7,7 +7,7 @@
 
 [Printed Summer Dress Page](#Item-Page)
 
-![][image1] 
+
 
 # Contact Us
 
@@ -306,5 +306,3 @@
   1. Click on any breadcrumb link (e.g., "Women," "Dresses").  
 * **Expected Result:** The user is redirected to the respective category or homepage.  
 * **Priority:** **Low** – Navigation aids are useful for browsing but not crucial to the purchasing process.
-
-[image1]: <data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAm0AAAALCAYAAAAtObrQAAAAw0lEQVR4Xu3WMY0CABQFQWSdA1QggBIvOEAJCq4+BZgggfz20d4j+ckUo2H38Hu/vui5Pf7gw/PyA6udT0fgyw45GfyvjDWMDCBskzEB+kxbWcYaRgYQtsmYAH2mrSxjDSMDCNtkTIA+01aWsYaRAYRtMiZAn2kry1jDyADCNhkToM+0lWWsYWQAYZuMCdBn2soy1jAygLBNxgToM21lGWsYGUDYJmMC9Jm2sow1jAwgbJMxAfpMW1nGGkYGELbJmAB9bxL59nuswkk6AAAAAElFTkSuQmCC>
