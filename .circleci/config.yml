@@ -67,7 +67,6 @@ jobs:
             git config --global user.email "circleci-bot@example.com"
             git config --global user.name "CircleCI Bot"
 
-            git clean -fd
             git checkout -b Auto-deliver-test-reports || git checkout Auto-deliver-test-reports
 
             git reset --hard
