@@ -52,6 +52,17 @@ results as a count and results using nightwatch.
 
 - Created a pipline using circleci for CI/CD that auto runs tests and deliver test reports to [Auto-deliver-test-reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports) branch, which is trigered by Github App Trigger on the main branch.
 
+- CI/CD steps:       
+    - Check out the code from the repository
+    - install npm dependencies
+    - Install Chrome & ChromeDriver
+    - Start ChromeDriver
+    - Run UI tests
+    - Download wait-for-it.sh to run local server in background
+    - Start the server in the background
+    - Run API tests
+    - Auto-commit and push test reports to Auto-deliver-test-reports branch
+
 ## Reports:
 
 ### [UI Reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports/UI/nightwatchReports):

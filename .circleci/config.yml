@@ -8,8 +8,16 @@ jobs:
     executor: node/default
     steps:
       - checkout  # Check out the code from the repository
+      - install npm dependencies
+      - Install Chrome & ChromeDriver
+      - Start ChromeDriver
+      - Run UI tests
+      - Download wait-for-it.sh to run local server in background
+      - Start the server in the background
+      - Run API tests
+      - Auto-commit and push test reports to Auto-deliver-test-reports branch
 
-      # Install Node.js dependencies
+      # Install dependencies
       - run:
           name: Install dependencies
           command: npm install
