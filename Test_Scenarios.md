@@ -1,8 +1,5 @@
-## ![][image1] 
-
 # **SDET 2024 [My Store](http://automationpractice.multiformis.com/index.php) User Scenarios**
 
-**─**
 
 [Contact Us Page](#Contact-Us)
 
@@ -10,10 +7,11 @@
 
 [Printed Summer Dress Page](#Item-Page)
 
+![][image1] 
 
 # Contact Us
 
-### **High Priority Scenarios**
+## **High Priority Scenarios**
 
 #### **1\. Successful Submission with All Fields**
 
@@ -79,7 +77,7 @@
 * **Priority:** **High** – Prevents empty submissions, ensuring that users provide the necessary information for support to respond effectively.
 
 
-  ### **Medium Priority Scenarios**
+  ## **Medium Priority Scenarios**
 
 #### **7\. Invalid Email Format**
 
@@ -113,7 +111,7 @@
 * **Expected Result:** An error message is displayed, indicating that the file format is not supported.  
 * **Priority:** **Medium** – Improves security and ensures that only valid file types can be uploaded, enhancing the user experience.
 
-  ### **Low Priority Scenarios**
+  ## **Low Priority Scenarios**
 
 #### **10\. Submission with File Upload**
 
@@ -124,10 +122,10 @@
   4. Click the "Submit" button.  
 * **Expected Result:** The form is successfully submitted, and a success message is displayed.  
 * **Priority:** **Low** – Verifies the file upload functionality, which is useful but not critical for basic form submission.
-
+#
 # Search Page
 
-### **High Priority Scenarios**
+## **High Priority Scenarios**
 
 #### **1\. Search for a Word and Verify Results**
 
@@ -149,7 +147,7 @@
 * **Expected Result:** The total number of results matches the count displayed in the results header.  
 * **Priority:** **High** – Ensures that the result count is accurate, helping users gauge the number of relevant results for their query.
 
-  ### **Medium Priority Scenarios**
+  ## **Medium Priority Scenarios**
 
   #### **3\. No Results Found for a Search Term**
 
@@ -183,7 +181,7 @@
 * **Priority:** **Medium** – Ensures that the search is case-insensitive, providing a consistent user experience regardless of input case.
 
 
-  ### **Low Priority Scenarios**
+  ## **Low Priority Scenarios**
 
   #### **6\. Search with Blank Input**
 
@@ -203,12 +201,13 @@
   3. Click the "Search" button.  
 * **Expected Result:** A message is displayed indicating that no results were found for the search term.  
 * **Priority:** **Low** – Improves user guidance by handling unexpected inputs and providing feedback.
+#
 
 # Item Page
 
-### **High Priority Scenarios**
+## **High Priority Scenarios**
 
-### **1\. Checking Product Availability**
+#### **1\. Checking Product Availability**
 
 * **Scenario:** User checks product availability based on size and color combinations.  
 * **Steps:**  
@@ -251,7 +250,7 @@
 * **Priority:** **High** – Users need to be able to add available products to the cart to proceed with purchasing.
 
 
-  ### **Medium Priority Scenarios**
+  ## **Medium Priority Scenarios**
 
   #### **5\. Viewing Product Details**
 
@@ -280,7 +279,7 @@
 * **Priority:** **Medium** – Pricing information is crucial, but it's static compared to dynamic availability changes.
 
 
-  ### **Low Priority Scenarios**
+  ## **Low Priority Scenarios**
 
   #### **8\. Printing Product Details**
 

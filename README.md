@@ -48,7 +48,7 @@ results as a count and results using nightwatch.
 
 - Generated HTML reports for the scripts results.
 
-- Documented all test cases created, and all bugs found.
+- Documented all Test [Scenarios/Cases](Test_Scenarios.md) created, and all bugs found.
 
 - Created a pipline using circleci for CI/CD that auto runs tests and deliver test reports to [Auto-deliver-test-reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports) branch, which is trigered by Github App Trigger on the main branch.
 
