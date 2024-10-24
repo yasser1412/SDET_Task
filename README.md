@@ -67,11 +67,11 @@ results as a count and results using nightwatch.
 
 ### [UI Reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports/UI/nightwatchReports):
 
-- https://rawcdn.githack.com/yasser1412/SDET_Task/35fdace4a50315cdc0630d7cf95e1ba2b8262e76/UI/nightwatchReports/nightwatch-html-report/index.html
+- https://rawcdn.githack.com/yasser1412/SDET_Task/77285a2d58caf0caea9064e8f1cd8f80fc7c5fec/UI/nightwatchReports/nightwatch-html-report/index.html
 
 ### [API Report](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports/API/jestReports):
 
-- https://rawcdn.githack.com/yasser1412/SDET_Task/35fdace4a50315cdc0630d7cf95e1ba2b8262e76/API/jestReports/test-report.html
+- https://rawcdn.githack.com/yasser1412/SDET_Task/77285a2d58caf0caea9064e8f1cd8f80fc7c5fec/API/jestReports/test-report.html
 
 
 ## CircleCI
