@@ -11,7 +11,7 @@ module.exports = {
       browser.end();
     },
 
-    'Search for "dress" then Count and verify the total number of results': function (browser) {
+    'Search for a word then Count and verify the total number of results': function (browser) {
       const homePage = browser.page.homePage();
       const searchQuery = 'dress';
 
