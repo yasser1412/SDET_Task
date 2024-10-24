@@ -1,26 +1,74 @@
 module.exports = {
-    'Search for a word and verify results': function (browser) {
-      const homePage = browser.page.homePage();
-      const searchQuery = 'dress';
+  'Search for a Word and Verify Results': function (browser) {
+    const homePage = browser.page.homePage();
 
-      homePage
-        .navigate()
-        .performSearch(searchQuery)
-        .verifySearchResultsContainText(searchQuery);  // Verify that each result contains "Blouse"
+    const searchQuery = 'Dress';
+
+    homePage
+      .navigate()
+      .performSearch(searchQuery)
+      .verifySearchResultsContainText(searchQuery);
+
+    browser.end();
+  },
+
+  'Search for a word then Count and verify the total number of results': function (browser) {
+    const homePage = browser.page.homePage();
+    const searchQuery = 'dress';
+
+    homePage
+      .navigate()
+      .performSearch(searchQuery)
+      .countResults()  // Count and verify the total number of results
       
-      browser.end();
-    },
+    browser.end();
+  },
 
-    'Search for a word then Count and verify the total number of results': function (browser) {
-      const homePage = browser.page.homePage();
-      const searchQuery = 'dress';
+  'No Results Found for a Search Term': function (browser) {
+    const homePage = browser.page.homePage();
+    const searchQuery = 'xyzabc'; // Non-existent term
 
-      homePage
-        .navigate()
-        .performSearch(searchQuery)
-        .countResults()  // Count and verify the total number of results
-        
-      browser.end();
-    }
-  };
+    homePage
+      .navigate()
+      .performSearch(searchQuery)
+      .assert.containsText('@noResultsMessage', `No results were found for your search "${searchQuery}"`);
+
+    browser.end();
+  },
+
+  'Search with Special Characters': function (browser) {
+    const homePage = browser.page.homePage();
+    const searchQuery = '@#$%'; // Special characters
+
+    homePage
+      .navigate()
+      .performSearch(searchQuery)
+      .assert.containsText('@noResultsMessage', `No results were found for your search "${searchQuery}"`);
+
+    browser.end();
+  },
+
+  'Search with Blank Input': function (browser) {
+    const homePage = browser.page.homePage();
+
+    homePage
+      .navigate()
+      .performSearch("")
+      .assert.containsText('@noResultsMessage', 'Please enter a search keyword'); // Assuming an error message appears in body
+
+    browser.end();
+  },
+
+  'Search with Partial Word Match': function (browser) {
+    const homePage = browser.page.homePage();
+    const searchQuery = 'blou'; // Partial word
+
+    homePage
+      .navigate()
+      .performSearch(searchQuery)
+      .verifySearchResultsContainText(searchQuery);
+
+    browser.end();
+  },
+};
   

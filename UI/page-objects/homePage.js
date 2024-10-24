@@ -6,7 +6,8 @@ module.exports = {
         searchButton: 'button[name="submit_search"]',
         resultsSection: '#center_column ul.product_list',
         resultItems: '#product_list a.product-name',
-        resultCount: '.product-count'
+        resultCount: '.product-count',
+        noResultsMessage: 'p.alert.alert-warning'
     },
     
     commands: [{
@@ -87,7 +88,6 @@ module.exports = {
 
             });
             return this;
-            
-        }
+        },
     }]
 };
