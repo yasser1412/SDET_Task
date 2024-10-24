@@ -12,14 +12,14 @@ jobs:
       - Install Chrome & ChromeDriver
       - Start ChromeDriver
       - Run UI tests
-      - Download wait-for-it.sh to run local server in background
-      - Start the server in the background
+      - Download wait-for-it.sh #to run local server in background
+      - Start Local Server #in the background
       - Run API tests
-      - Auto-commit and push test reports to Auto-deliver-test-reports branch
+      - Auto-commit and push reports #to Auto-deliver-test-reports branch
 
       # Install dependencies
       - run:
-          name: Install dependencies
+          name: Install npm dependencies
           command: npm install
 
       - run:
