@@ -1,13 +1,13 @@
 # **SDET 2024 [My Store](http://automationpractice.multiformis.com/index.php) User Scenarios**
 
+For Google Docs Version Click [HERE](https://docs.google.com/document/d/1oCb3mh8DT5X3LU1OJOOtjK4FOEokgf0P-8U_MvFmnOI/edit?usp=sharing)
+#
 
 [Contact Us Page](#Contact-Us)
 
 [Search Page](#Search-Page)
 
 [Printed Summer Dress Page](#Item-Page)
-
-
 
 # Contact Us
 

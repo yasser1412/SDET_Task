@@ -11,6 +11,10 @@
 [Tests Reports](#Reports)
 
 [CircleCI Status](#CircleCI)
+#
+[Test Scenarios/Cases](UI/README.md)
+
+[Bugs Reporting](https://docs.google.com/document/d/1I5Ageqn-_TnrjEzhblVRfAhg-cOeTvTNOPScY09kpXk/edit?usp=sharing)
 
 ## Description
 
@@ -48,7 +52,7 @@ results as a count and results using nightwatch.
 
 - Generated HTML reports for the scripts results.
 
-- Documented all Test [Scenarios/Cases](UI/README.md) created, and all bugs found.
+- Documented all Test [Scenarios/Cases](UI/README.md) created, and all [Bugs](https://docs.google.com/document/d/1I5Ageqn-_TnrjEzhblVRfAhg-cOeTvTNOPScY09kpXk/edit?usp=sharing) found.
 
 - Created a pipline using circleci for CI/CD that auto runs tests and deliver test reports to [Auto-deliver-test-reports](https://github.com/yasser1412/SDET_Task/tree/Auto-deliver-test-reports) branch, which is trigered by Github App Trigger on the main branch.
 
