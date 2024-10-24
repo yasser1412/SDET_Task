@@ -7,6 +7,7 @@ let token;  // Will be used for authenticated requests
 let validEmail = 'test@example.com';
 let validPassword ='password123';
 let newUserEmail = 'newuser11@example.com'
+
 describe('External API Routes', () => {
     // Run before all tests to create a user and get a valid authentication token
     beforeAll(async () => {

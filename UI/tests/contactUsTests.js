@@ -4,11 +4,11 @@ module.exports = {
 
         contactUsPage.navigate()
             .fillContactForm({
-                subject: '2',  // Assuming '2' is 'Customer service'
+                subject: '2',  //'2' is 'Customer service'
                 email: 'test@example.com',
                 orderReference: '12345',
                 message: 'This is a test message.',
-                filePath: '../testfiles/samplefile.pdf'  // Replace with actual file path
+                filePath: '../testfiles/samplefile.pdf'  
             })
             .submitAndExpectSuccess();
     },
@@ -33,7 +33,7 @@ module.exports = {
                 subject: '2',
                 email: 'test@example.com',
                 message: 'This is a file upload test.',
-                filePath: '../testfiles/samplefile.pdf'  // Replace with actual file path
+                filePath: '../testfiles/samplefile.pdf'  
             })
             .submitAndExpectSuccess();
     },
@@ -95,7 +95,7 @@ module.exports = {
                 subject: '2',
                 email: 'test@example.com',
                 message: 'Trying to upload an invalid file.',
-                filePath: '../testfiles/samplefile.exe'  // Replace with actual invalid file path
+                filePath: '../testfiles/samplefile.exe'
             })
             .submitAndExpectError();
     },
@@ -108,7 +108,7 @@ module.exports = {
                 subject: '2',
                 email: 'test@example.com',
                 message: 'Trying to upload a large file.',
-                filePath: '../testfiles/largesamplefile.pdf'  // Replace with actual large file path
+                filePath: '../testfiles/largesamplefile.pdf'
             })
             .submitAndExpectSuccess();
     },
