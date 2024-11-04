@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chromedriver": "^130.0.0",
+    "chromedriver": "^130.0.2",
     "jest": "^29.7.0",
     "jest-html-reporter": "^3.10.2",
     "mock-user-auth": "^1.0.15",

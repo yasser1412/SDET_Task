@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="6">
+
+  <testsuite name="searchTest"
+    errors="0" failures="1" hostname="" id="" package="searchTest" skipped="0"
+    tests="6" time="40.53" timestamp="">
+  
+    <testcase name="Search for a Word and Verify Results" classname="searchTest" time="3.490" assertions="9">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Failed [ok]: (Result 6 contains &#34;Dress&#34;) - expected &#34;true&#34; but got: &#34;false&#34; (0ms)">    at NightwatchAPI.&lt;anonymous&gt; (/home/circleci/project/UI/page-objects/searchPage.js:44:53)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Search for a word then Count and verify the total number of results" classname="searchTest" time="1.860" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="No Results Found for a Search Term" classname="searchTest" time="3.589" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search with Special Characters" classname="searchTest" time="3.598" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search with Blank Input" classname="searchTest" time="3.828" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search with Partial Word Match" classname="searchTest" time="3.899" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
