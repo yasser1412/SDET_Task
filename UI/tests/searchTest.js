@@ -1,10 +1,10 @@
 module.exports = {
   'Search for a Word and Verify Results': function (browser) {
-    const homePage = browser.page.homePage();
+    const searchPage = browser.page.searchPage();
 
     const searchQuery = 'Dress';
 
-    homePage
+    searchPage
       .navigate()
       .performSearch(searchQuery)
       .verifySearchResultsContainText(searchQuery);
@@ -13,10 +13,10 @@ module.exports = {
   },
 
   'Search for a word then Count and verify the total number of results': function (browser) {
-    const homePage = browser.page.homePage();
+    const searchPage = browser.page.searchPage();
     const searchQuery = 'dress';
 
-    homePage
+    searchPage
       .navigate()
       .performSearch(searchQuery)
       .countResults()  // Count and verify the total number of results
@@ -25,10 +25,10 @@ module.exports = {
   },
 
   'No Results Found for a Search Term': function (browser) {
-    const homePage = browser.page.homePage();
+    const searchPage = browser.page.searchPage();
     const searchQuery = 'xyzabc'; // Non-existent term
 
-    homePage
+    searchPage
       .navigate()
       .performSearch(searchQuery)
       .assert.containsText('@noResultsMessage', `No results were found for your search "${searchQuery}"`);
@@ -37,10 +37,10 @@ module.exports = {
   },
 
   'Search with Special Characters': function (browser) {
-    const homePage = browser.page.homePage();
+    const searchPage = browser.page.searchPage();
     const searchQuery = '@#$%'; // Special characters
 
-    homePage
+    searchPage
       .navigate()
       .performSearch(searchQuery)
       .assert.containsText('@noResultsMessage', `No results were found for your search "${searchQuery}"`);
@@ -49,9 +49,9 @@ module.exports = {
   },
 
   'Search with Blank Input': function (browser) {
-    const homePage = browser.page.homePage();
+    const searchPage = browser.page.searchPage();
 
-    homePage
+    searchPage
       .navigate()
       .performSearch("")
       .assert.containsText('@noResultsMessage', 'Please enter a search keyword'); // Assuming an error message appears in body
@@ -60,10 +60,10 @@ module.exports = {
   },
 
   'Search with Partial Word Match': function (browser) {
-    const homePage = browser.page.homePage();
+    const searchPage = browser.page.searchPage();
     const searchQuery = 'blou'; // Partial word
 
-    homePage
+    searchPage
       .navigate()
       .performSearch(searchQuery)
       .verifySearchResultsContainText(searchQuery);
